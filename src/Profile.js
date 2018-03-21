@@ -1,6 +1,7 @@
 import React from 'react';
 import CatName from './Catname';
 import Gender from './Gender';
+import Age from './Age';
 
 export class Profile extends React.Component {
     render(){
@@ -10,7 +11,8 @@ export class Profile extends React.Component {
                     Furry Profile Maker! 
                 </h1>
                 <CatName />   
-                <Gender />    
+                <Gender />  
+                <Age />   
             </div>
         )
     }

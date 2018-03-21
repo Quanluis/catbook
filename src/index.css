@@ -12,6 +12,11 @@ p {
 .profile {
   color: #7F8C8D;
 }
+.age {
+  justify-content: center;
+  display: inherit;
+  margin: auto;
+}
 
 button {
   margin:auto;
