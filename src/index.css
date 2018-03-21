@@ -9,6 +9,9 @@ p {
   text-align: center;
   color: '#2E4053';
 }
+.profile {
+  color: #7F8C8D;
+}
 
 button {
   margin:auto;
@@ -28,4 +31,16 @@ button {
   font-size: 20px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
+}
+.form {
+    justify-content: center;
+    text-align: center;
+    margin:auto; 
+    display: block;
+}
+.Gender {
+  justify-content: center;
+  display: inherit;
+  margin: auto;
+  text-align: center;
 }
