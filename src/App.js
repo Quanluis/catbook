@@ -1,6 +1,21 @@
 import React, { Component } from 'react';
+import {Profile} from './Profile';
 
 class App extends Component {
+
+  constructor(){
+    super();
+    this.state = {
+      showComponent: false,
+    }
+    this._onButtonClick = this._onButtonClick.bind(this);
+  }
+    _onButtonClick(){
+      this.setState({
+        showComponent: true,
+      })
+    }
+
   render() {
     return (
     <div>
@@ -15,7 +30,8 @@ class App extends Component {
              </p>
             </div>
         <div>
-        <button >Create Profile</button>
+        <button onClick = {this._onButtonClick} > Create Profile  </button> 
+        {this.state.showComponent ? <Profile />: null}
         </div>
       </div>
     );
