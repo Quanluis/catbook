@@ -20,7 +20,17 @@ p {
 .description {
   display: inherit;
   margin: auto;
+  height: 100px;
+  font-size: 10pt;
   text-align: center;
+  height: 90px;
+  
+}
+.des-box {
+  width: 40%;
+  height: 80%;
+  resize: none;
+
 }
 .image{
   text-align: center;
