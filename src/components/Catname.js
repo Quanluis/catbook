@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Catname extends React.Component{
+export class Catname extends React.Component{
   render(){
       return(
           <div>

@@ -1,9 +1,9 @@
 import React from 'react';
-import CatName from './Catname';
-import Gender from './Gender';
-import Age from './Age';
-import Description from './Description';
-import ImageProfile from './ImageProfile';
+import CatName from './components/Catname';
+import Gender from './components/Gender';
+import Age from './components/Age';
+import Description from './components/Description';
+import ImageProfile from './components/ImageProfile';
 
 export class Profile extends React.Component {
     render(){
