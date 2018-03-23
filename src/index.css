@@ -17,6 +17,15 @@ p {
   display: inherit;
   margin: auto;
 }
+.description {
+  display: inherit;
+  margin: auto;
+  text-align: center;
+}
+.image{
+  text-align: center;
+  margin: auto;
+}
 
 button {
   margin:auto;

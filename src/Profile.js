@@ -2,6 +2,8 @@ import React from 'react';
 import CatName from './Catname';
 import Gender from './Gender';
 import Age from './Age';
+import Description from './Description';
+import ImageProfile from './ImageProfile';
 
 export class Profile extends React.Component {
     render(){
@@ -12,7 +14,9 @@ export class Profile extends React.Component {
                 </h1>
                 <CatName />   
                 <Gender />  
-                <Age />   
+                <Age />  
+                <Description />
+                <ImageProfile />
             </div>
         )
     }

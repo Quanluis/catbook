@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Profile} from './Profile';
+import {Profile} from './Profile';  
 
 class App extends Component {
 
@@ -27,11 +27,12 @@ class App extends Component {
              <p>
              Welcome to the Catbook! Create a profile for your furry friend and have the Option for 
              others to see them!  
-             </p>          
+             </p>        
             </div>
         <div>
+        {this.state.showComponent ? null : <Profile />}
         <button onClick = {this._onButtonClick} > Create Profile  </button> 
-        {this.state.showComponent ? <Profile />: null}
+        
         </div>
       </div>
     );
