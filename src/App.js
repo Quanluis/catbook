@@ -30,7 +30,7 @@ class App extends Component {
              </p>        
             </div>
         <div>
-        {this.state.showComponent ? null : <Profile />}
+        {this.state.showComponent ? <Profile /> : null }
         <button onClick = {this._onButtonClick} > Create Profile  </button> 
         
         </div>
