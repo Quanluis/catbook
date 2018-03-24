@@ -1,6 +1,32 @@
 import React from 'react';
 
 class Gender extends React.Component {
+
+    constructor(){
+        super()
+        this.state = {
+            male: '',
+            female: '',
+            other: ''
+        }
+    }
+    pickMale(event){
+        this.setState({
+             male: +event.target.value
+        });
+    }
+    pickFemale(event){
+        this.setState({
+            female: +event.target.value
+        })
+    }
+    pickOther(event){
+        this.setState({
+            other: +event.target.value
+        })
+    }
+
+
     render(){
         return(
             <div>
@@ -14,11 +40,19 @@ class Gender extends React.Component {
                 <div>
                 <form className = 'Gender' action="submit" >
                Male
-              <input className ="Gender" type="radio" name="gender" value = "male"/> 
+              <input
+               value = {this.state.male}
+               onChange = {this.pickMale.bind(this)} className ="Gender" type="radio" name="gender"  /> 
                Female
-              <input className = "Gender" type = "radio" name = "gender" value = 'female' />
+              <input
+              value = {this.state.female}
+              onChange = {this.pickFemale.bind(this)}            
+              className = "Gender" type = "radio" name = "gender" />
               Other
-              <input className = "Gender" type = "radio" name = "gender" value = "other" />
+              <input 
+              value = {this.state.female}
+              onChange = {this.pickOther.bind(this)}     
+              className = "Gender" type = "radio" name = "gender"/>
               </form>
                 </div>
             </div>
