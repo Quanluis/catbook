@@ -15,6 +15,7 @@ export class Catname extends React.Component{
     onlyLetters(event){
       this.setState({
        letters: event.target.value.substr(0,15)
+       
       })
       
     }
