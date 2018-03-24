@@ -1,24 +1,26 @@
 import React from 'react';
 
-
-
 export class Catname extends React.Component{
 
   constructor (){
     super();
     this.state = {
-      letters: '' 
+      lettersFirst: '',
+      lettersLast: ''
     }
-   
-
   }
-    onlyLetters(event){
+    onlyLettersFirst(event){
       this.setState({
-       letters: event.target.value.substr(0,15)
-       
-      })
-      
+       lettersFirst: event.target.value.substr(0,15)  
+      }) 
+
     }
+    onlyLettersLast(event){
+      this.setState({
+       lettersLast: event.target.value.substr(0,15)  
+      })
+    }
+
 
   render(){
       return(
@@ -29,13 +31,17 @@ export class Catname extends React.Component{
               <form className ="form" action="submit" > <br/>
               First Name
               <input
-              value = {this.state.letters}
-              onChange = {this.onlyLetters.bind(this) }  className ="form" type="text" name="firstName"/> <br/>
+                value = {this.state.lettersFirst}
+                onChange = {this.onlyLettersFirst.bind(this)}  className ="form" type="text" name="firstName"/>
+                <br/>
               </form>
               <div>
               <form className = 'form' action="submit" > <br/>
               Last Name 
-              <input className ="form" type="text" name=""/> <br/>
+              <input    
+                value = {this.state.lettersLast}
+                onChange = {this.onlyLettersLast.bind(this)} 
+                className ="form" type="text" name=""/> <br/>
               </form>
               </div>
             </div>
