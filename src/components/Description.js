@@ -1,6 +1,20 @@
 import React from 'react';
 
 class Description extends React.Component{
+
+    constructor(){
+        super()
+         this.State = {
+             descript: ''
+
+        }
+    }
+    descriptionChange(e){
+        this.setState ({
+            descript: +e.target.value
+        }) 
+    }
+
     render(){
         return(
             <div>
@@ -11,7 +25,9 @@ class Description extends React.Component{
                 <p>Show off some Cool info,story,Anything about your friend!</p>
                 <br/>   
                 <form className="description">
-                <textarea className = 'des-box' rows = '5' col= '40'>
+                <textarea
+                onChange = {this.descriptionChange.bind(this)}  
+                className = 'des-box' rows = '5' col= '40'>
                     </textarea>
                 
                 </form>
