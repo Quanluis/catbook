@@ -1,16 +1,16 @@
 html {
-  background-color: #FDEBD0;
+  background-color: #fdebd0;
 }
 h1 {
   text-align: center;
-  color: #2E4053 ;
+  color: #2e4053;
 }
 p {
   text-align: center;
-  color: '#2E4053';
+  color: "#2E4053";
 }
 .profile {
-  color: #7F8C8D;
+  color: #7f8c8d;
 }
 .age {
   justify-content: center;
@@ -24,22 +24,20 @@ p {
   font-size: 10pt;
   text-align: center;
   height: 90px;
-  
 }
 .des-box {
   width: 40%;
   height: 80%;
   resize: none;
-
 }
-.image{
+.image {
   text-align: center;
   margin: auto;
 }
 
 button {
-  margin:auto;
-  display:block;
+  margin: auto;
+  display: block;
   margin-top: 120px;
   background: #3498db;
   background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
@@ -57,10 +55,10 @@ button {
   text-decoration: none;
 }
 .form {
-    justify-content: center;
-    text-align: center;
-    margin:auto; 
-    display: block;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  display: block;
 }
 .Gender {
   justify-content: center;

@@ -1,20 +1,17 @@
-import React from 'react';
+import React from "react";
 
-class SubmitButton extends React.Component{
+class SubmitButton extends React.Component {
+  constructor() {
+    super();
+    this.State = {};
+  }
 
-    constructor(){
-        super()
-        this.State = {
-            
-        }
-    }
-    
-    render(){
-        return(
-            <div>
-                <button onClick = { (e) => console.log('hello')} >Submit</button>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <button onClick={e => console.log("hello")}>Submit</button>
+      </div>
+    );
+  }
 }
 export default SubmitButton;
