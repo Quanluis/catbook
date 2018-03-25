@@ -4,6 +4,7 @@ import Gender from './components/Gender';
 import Age from './components/Age';
 import Description from './components/Description';
 import ImageProfile from './components/ImageProfile';
+import SubmitBUtton from './components/SubmitButton';
 
 export class Profile extends React.Component {
     render(){
@@ -17,6 +18,7 @@ export class Profile extends React.Component {
                 <Age />  
                 <Description />
                 <ImageProfile />
+                <SubmitBUtton />
             </div>
         )
     }
