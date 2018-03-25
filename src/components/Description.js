@@ -9,9 +9,9 @@ class Description extends React.Component{
 
         }
     }
-    descriptionChange(e){
+    descriptionChange(event){
         this.setState ({
-            descript: +e.target.value
+            descript: +event.target.value
         }) 
     }
 
@@ -26,7 +26,7 @@ class Description extends React.Component{
                 <br/>   
                 <form className="description">
                 <textarea
-                onChange = {this.descriptionChange.bind(this)}  
+                onInput= {this.descriptionChange.bind(this)}  
                 className = 'des-box' rows = '5' col= '40'>
                     </textarea>
                 

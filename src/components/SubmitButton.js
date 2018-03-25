@@ -6,11 +6,9 @@ class SubmitButton extends React.Component{
         super()
         this.State = {
             
-
         }
     }
     
-
     render(){
         return(
             <div>
