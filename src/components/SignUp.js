@@ -1,6 +1,5 @@
 import React from 'react'; 
 import { Link } from 'react-router-dom';
-import Aftersignup from './Aftersignup';
 
 class SignUp extends React.Component {
     render(){
