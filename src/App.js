@@ -1,19 +1,10 @@
 import React, { Component } from "react";
 import { Profile } from "./Profile";
+import { Route, withRouter } from 'react-router-dom';
+import SignUp from "./components/SignUp";
+import Main from './components/Main';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      showComponent: false
-    };
-    this._onButtonClick = this._onButtonClick.bind(this);
-  }
-  _onButtonClick() {
-    this.setState({
-      showComponent: true
-    });
-  }
 
   render() {
     return (
@@ -29,12 +20,13 @@ class App extends Component {
           </p>
         </div>
         <div>
-          {this.state.showComponent ? <Profile /> : null}
-          <button onClick={this._onButtonClick}> Create Profile </button>
+          <Route path = '/' exact component = {Main} /> 
+          <Route path = '/signup' component = {SignUp} />
+          <Route path = '/createprofile' component = {Profile} />           
         </div>
       </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);
