@@ -14,7 +14,7 @@ class SignUp extends React.Component {
                     <br/>
                     <input className = "form" type="password" placeholder = "Enter password" />
                     <br/>
-                    <input className = "form" type="password" placeHolder = "Enter Password twice"/>
+                    <input className = "form" type="password" placeholder = "Enter Password twice"/>
                     <button>Submit</button>
                 </form>
             </div>
