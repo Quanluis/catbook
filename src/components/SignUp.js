@@ -1,5 +1,6 @@
 import React from 'react'; 
 import { Link } from 'react-router-dom';
+import Aftersignup from './Aftersignup';
 
 class SignUp extends React.Component {
     render(){
@@ -16,10 +17,7 @@ class SignUp extends React.Component {
                     <input className = "form" type="password" placeholder = "Enter password" />
                     <br/>
                     <input className = "form" type="password" placeholder = "Enter Password twice"/>
-                    <button >
-                    <Link to = './Aftersignup' > Submit </Link>
-                    </button>
-
+                    <button> <Link to = "/Aftersignup"> Login </Link> </button>
                 </form>
             </div>
         )
