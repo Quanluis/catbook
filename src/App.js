@@ -3,6 +3,7 @@ import { Profile } from "./Profile";
 import { Route, withRouter } from 'react-router-dom';
 import SignUp from "./components/SignUp";
 import Main from './components/Main';
+import Aftersignup from "./components/Aftersignup";
 
 class App extends Component {
 
@@ -21,6 +22,7 @@ class App extends Component {
         </div>
         <div>
           <Route path = '/' exact component = {Main} /> 
+          <Route path = '/aftersignup' component = {Aftersignup} />
           <Route path = '/signup' component = {SignUp} />
           <Route path = '/createprofile' component = {Profile} />           
         </div>
