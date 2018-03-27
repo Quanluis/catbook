@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { Profile } from "./Profile";
+import { Route, withRouter } from 'react-router-dom';
+import SignUp from "./components/SignUp";
+import profile from './Profile';
 
 class App extends Component {
   constructor() {
@@ -29,6 +32,12 @@ class App extends Component {
           </p>
         </div>
         <div>
+          <Route path = '/signup' component = {SignUp} />
+          <Route path = '/createprofile' component = {Profile} />
+          <button className = "login-signup">Sign Up</button>
+          <button className = "login-signup"> Login</button>       
+        </div>
+        <div>
           {this.state.showComponent ? <Profile /> : null}
           <button onClick={this._onButtonClick}> Create Profile </button>
         </div>
@@ -37,4 +46,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);
