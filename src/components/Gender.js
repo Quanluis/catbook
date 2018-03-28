@@ -4,24 +4,22 @@ class Gender extends React.Component {
   constructor() {
     super();
     this.state = {
-      male: "",
-      female: "",
-      other: ""
+     gender: ''
     };
   }
   pickMale(event) {
     this.setState({
-      male: +event.target.value
+      gender: "Male"
     });
   }
   pickFemale(event) {
     this.setState({
-      female: +event.target.value
+      gender: "Female"
     });
   }
   pickOther(event) {
     this.setState({
-      other: +event.target.value
+      gender: "Other"
     });
   }
 
