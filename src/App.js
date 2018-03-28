@@ -23,13 +23,13 @@ class App extends Component {
         <div>
           <Switch>
           <Route path = '/' exact component = {Main} /> 
-          <Route path = '/aftersignup'exact component = {Aftersignup} />
+          <Route path = '/aftersignup' component = {Aftersignup} />
           <Route path = '/signup' exact component = {SignUp} />
           <Route path = '/createprofile' exact component = {Profile} />  
-          <Redirect path = "/*" to = "/" /> 
           <Redirect from = '/aftersignup/*' to = '/aftersignup' />
           <Redirect from = '/signup/*' to = '/signup' />
           <Redirect from = '/createprofile/*' to = "/createprofile" />
+          <Redirect path = "/*" to = "/" /> 
           </Switch>
         </div>
       </div>
