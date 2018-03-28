@@ -12,8 +12,9 @@ class Main extends React.Component{
                 <input className ="form" type="email" placeholder = "Email"/>
                     <br/>
                  <input className = "form" type="password" placeholder = "Enter Password" />
-                <button>Login</button>
-                </form>
+                <button>Login</button>     
+                </form>          
+                <Link className = "link" to = './createProfile'> Login </Link> 
                 <Link className = "link" to = './Signup'> signup </Link>
             </div>
         )
