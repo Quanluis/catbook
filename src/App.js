@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Profile } from "./Profile";
-import { Route, withRouter } from 'react-router-dom';
+import { Route, withRouter, Switch, Redirect } from 'react-router-dom';
 import SignUp from "./components/SignUp";
 import Main from './components/Main';
 import Aftersignup from "./components/Aftersignup";
@@ -21,10 +21,16 @@ class App extends Component {
           </p>
         </div>
         <div>
+          <Switch>
           <Route path = '/' exact component = {Main} /> 
-          <Route path = '/aftersignup' component = {Aftersignup} />
-          <Route path = '/signup' component = {SignUp} />
-          <Route path = '/createprofile' component = {Profile} />           
+          <Route path = '/aftersignup'exact component = {Aftersignup} />
+          <Route path = '/signup' exact component = {SignUp} />
+          <Route path = '/createprofile' exact component = {Profile} />  
+          <Redirect path = "/*" to = "/" /> 
+          <Redirect from = '/aftersignup/*' to = '/aftersignup' />
+          <Redirect from = '/signup/*' to = '/signup' />
+          <Redirect from = '/createprofile/*' to = "/createprofile" />
+          </Switch>
         </div>
       </div>
     );
