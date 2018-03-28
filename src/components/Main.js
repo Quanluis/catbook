@@ -6,7 +6,8 @@ class Main extends React.Component{
         super();
         this.state = {
             email: "",
-            password: ""
+            password: "",
+            isloggedIn: false
 
         };
     }
