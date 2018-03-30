@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
+import { signup } from '../store';
 
 class SignUp extends React.Component {
   constructor() {
@@ -25,6 +27,10 @@ class SignUp extends React.Component {
      this.setState({
        passwordTwice: event.target.value
      })
+   }
+   handleSubmit(){
+     const {email, password} = this.state;
+     this.props.signup(email, password)
    }
 
 
@@ -55,7 +61,7 @@ class SignUp extends React.Component {
             type="password"
             placeholder="Enter Password twice"
           />
-          <button>
+          <button onClick = {this.handleSubmit.bind(this)} >
             {" "}
             <Link to="/Aftersignup"> Login </Link>{" "}
           </button>
@@ -64,4 +70,11 @@ class SignUp extends React.Component {
     );
   }
 }
-export default SignUp;
+const mapStateToProps = state => state;
+
+const mapDispatchToProps = dispatch => ({
+  signup: (email, password) => dispatch(signup  (email, password))
+})
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
