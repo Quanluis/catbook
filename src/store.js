@@ -1,6 +1,17 @@
 import { createStore } from 'redux';
 
 export const LOGIN = 'LOGIN';
+export const SIGNUP = "SIGNUP";
+
+export const signup = (email,password) => ({
+    type: SIGNUP, 
+    payload: {
+        value: {
+            email,
+            password
+        }
+    }
+})
 
 export const login = (email, password) => ({
     type: LOGIN,
@@ -24,6 +35,12 @@ const reducer = (state=initialState, action) => {
                 isLoggedIn: true,
                 email: action.payload.value.email,
                 password: action.payload.value.password
+            }
+            case SIGNUP:
+            return{
+                ...state,
+                isLoggedIn: false,
+                email: action.payload.value.email
             }
             default:
                 return state;
