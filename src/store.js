@@ -13,10 +13,17 @@ export const login = (email, password) => ({
 })
 const initialState = {
     email: '',
+    password: '',
     isLoggedIn: false
 }
 const reducer = (state=initialState, action) => {
         switch(action.type){
+            case LOGIN:
+            return {
+                ...state,
+                isLoggedIn: true,
+                email: action.payload.value.username
+            }
             default:
                 return state;
         }
