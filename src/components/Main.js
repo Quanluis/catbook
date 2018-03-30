@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { login } from '../store';
+import { connect } from 'react-redux';
 
 class Main extends React.Component {
   constructor() {
@@ -20,6 +22,11 @@ class Main extends React.Component {
     this.setState({
       password: event.target.value
     });
+  }
+  handleSubmit(e) {
+  const {email, password} = this.state;
+  this.props.login(email,password)
+  
   }
 
   render() {
@@ -44,10 +51,12 @@ class Main extends React.Component {
             type="password"
             placeholder="Enter Password"
           />
-          <button>Login</button>
+          <button
+          onClick = {this.handleSubmit.bind(this)}
+          >Login</button>
         </form>
-        <Link className="link" to="./createProfile">
-          {" "}
+        <Link onClick = {this.handleSubmit.bind(this)} className="link" to="./createProfile">
+         {""} 
           Login{" "}
         </Link>
         <Link className="link" to="./Signup">
@@ -58,4 +67,13 @@ class Main extends React.Component {
     );
   }
 }
-export default Main;
+const mapStateToProps = state => state;
+
+const mapDispatchToProps = dispatch => ({
+  login: (email, password) => dispatch(login(email,password))
+})
+
+
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Main);
