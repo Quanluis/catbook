@@ -24,7 +24,7 @@ class Main extends React.Component {
     });
   }
   handleSubmit(e) {
-  const {email, password} = this.state;
+  const {email, password} = this.state; 
   this.props.login(email,password)
   
   }

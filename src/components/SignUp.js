@@ -9,7 +9,8 @@ class SignUp extends React.Component {
     this.state = {
       email: "",
       password: "",
-      passwordTwice: ""
+      passwordTwice: "",
+      isloggedin: false
         
     };
   }
@@ -63,7 +64,7 @@ class SignUp extends React.Component {
           />
           <button onClick = {this.handleSubmit.bind(this)} >
             {" "}
-            <Link to="/Aftersignup"> Login </Link>{" "}
+            <Link to="/Aftersignup"> Create </Link>{" "}
           </button>
         </form>
       </div>
@@ -73,7 +74,7 @@ class SignUp extends React.Component {
 const mapStateToProps = state => state;
 
 const mapDispatchToProps = dispatch => ({
-  signup: (email, password) => dispatch(signup  (email, password))
+  signup: (email, password) => dispatch(signup(email, password))
 })
 
 
