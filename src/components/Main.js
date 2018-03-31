@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { login } from '../store';
-import { connect } from 'react-redux';
+import { login } from "../store";
+import { connect } from "react-redux";
 
 class Main extends React.Component {
   constructor() {
@@ -24,9 +24,8 @@ class Main extends React.Component {
     });
   }
   handleSubmit(e) {
-  const {email, password} = this.state; 
-  this.props.login(email,password)
-  
+    const { email, password } = this.state;
+    this.props.login(email, password);
   }
 
   render() {
@@ -51,12 +50,14 @@ class Main extends React.Component {
             type="password"
             placeholder="Enter Password"
           />
-          <button
-          onClick = {this.handleSubmit.bind(this)}
-          >Login</button>
+          <button onClick={this.handleSubmit.bind(this)}>Login</button>
         </form>
-        <Link onClick = {this.handleSubmit.bind(this)} className="link" to="./createProfile">
-         {""} 
+        <Link
+          onClick={this.handleSubmit.bind(this)}
+          className="link"
+          to="./createProfile"
+        >
+          {""}
           Login{" "}
         </Link>
         <Link className="link" to="./Signup">
@@ -70,10 +71,7 @@ class Main extends React.Component {
 const mapStateToProps = state => state;
 
 const mapDispatchToProps = dispatch => ({
-  login: (email, password) => dispatch(login(email,password))
-})
-
-
-
+  login: (email, password) => dispatch(login(email, password))
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main);
